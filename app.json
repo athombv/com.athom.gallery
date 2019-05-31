@@ -1,0 +1,24 @@
+{
+  "id": "com.athom.gallery",
+  "version": "1.0.0",
+  "compatibility": ">=2.2.0",
+  "sdk": 2,
+  "name": {
+    "en": "Gallery"
+  },
+  "description": {
+    "en": "Upload images to use in Flows"
+  },
+  "category": [
+    "tools"
+  ],
+  "permissions": [],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Emile Nijssen",
+    "email": "emile@athom.nl"
+  }
+}
