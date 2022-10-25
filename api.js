@@ -1,43 +1,23 @@
 'use strict';
 
-const Homey = require('homey');
+module.exports = {
+  async getImages({ homey }) {
+    return homey.app.getImages();
+  },
 
-module.exports = [
-  
-  {
-    method: 'get',
-    path: '/image',
-    fn: async ( args ) => {
-      return Homey.app.getImages();
-    }
+  async getImage({ homey, params: { id } }) {
+    return homey.app.getImage({ id });
   },
-  
-  {
-    method: 'get',
-    path: '/image/:id',
-    fn: async ( args ) => {
-      const { id } = args.params;
-      return Homey.app.getImage({ id });
-    }
+
+  async createImage({ homey, body: { name, type, data } }) {
+    return homey.app.createImage({
+      name,
+      type,
+      data: Buffer.from(data, 'base64'),
+    });
   },
-  
-  {
-    method: 'post',
-    path: '/image',
-    fn: async ( args ) => {
-      const { name, type, data: base64 } = args.body;
-      const data = Buffer.from(base64, 'base64');
-      return Homey.app.createImage({ name, type, data });
-    }
+
+  async deleteImage({ homey, params: { id } }) {
+    await homey.app.deleteImage({ id });
   },
-  
-  {
-    method: 'delete',
-    path: '/image/:id',
-    fn: async ( args ) => {
-      const { id } = args.params;
-      return Homey.app.deleteImage({ id });
-    }
-  },
-  
-];
+};
