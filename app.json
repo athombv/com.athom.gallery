@@ -10,6 +10,7 @@
   "description": {
     "en": "Your Image Gallery"
   },
+  "brandColor": "#7620DF",
   "category": [
     "tools"
   ],
