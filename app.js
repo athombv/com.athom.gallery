@@ -113,7 +113,7 @@ module.exports = class extends Homey.App {
       throw new Error(`Unsupported image type: ${type}`);
     }
 
-    const file = `./userdata/${id}.${ext}`;
+    const file = `/userdata/${id}.${ext}`;
     await fs.promises.writeFile(file, data);
 
     this._settings[id] = {
