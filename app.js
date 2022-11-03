@@ -15,17 +15,17 @@ const DEFAULT_IMAGES = [
   {
     name: 'Kitten',
     type: 'image/jpeg',
-    path: path.join('./assets/images/kitten.jpg'),
+    path: path.join(__dirname, './assets/images/kitten.jpg'),
   },
   {
     name: 'Aurora',
     type: 'image/jpeg',
-    path: path.join('./assets/images/aurora.jpg'),
+    path: path.join(__dirname, './assets/images/aurora.jpg'),
   },
   {
     name: 'Moon',
     type: 'image/jpeg',
-    path: path.join('./assets/images/moon.jpg'),
+    path: path.join(__dirname, './assets/images/moon.jpg'),
   },
 ];
 
