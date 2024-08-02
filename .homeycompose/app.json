@@ -4,10 +4,32 @@
   "compatibility": ">=8.0.0",
   "sdk": 3,
   "name": {
-    "en": "Gallery"
+    "en": "Gallery",
+    "nl": "Galerij",
+    "da": "Galleri",
+    "de": "Galerie",
+    "es": "Galería",
+    "fr": "Galerie",
+    "it": "Galleria",
+    "no": "Galleri",
+    "sv": "Galleri",
+    "pl": "Galery",
+    "ru": "Галерея",
+    "ko": "갤러리"
   },
   "description": {
-    "en": "Your Image Gallery"
+    "en": "Your Image Gallery",
+    "nl": "Je Afbeeldingengalerij",
+    "da": "Dit Billedgalleri",
+    "de": "Deine Bildgalerie",
+    "es": "Tu Galería de Imágenes",
+    "fr": "Votre Galerie d'Images",
+    "it": "La Tua Galleria di Immagini",
+    "no": "Ditt Billegalleri",
+    "sv": "Ditt Bildgalleri",
+    "pl": "Twoja Galeria Zdjęć",
+    "ru": "Ваша Галерея Изображений",
+    "ko": "당신의 이미지 갤러리"
   },
   "platforms": [
     "local"
