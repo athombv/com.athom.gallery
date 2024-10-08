@@ -48,7 +48,7 @@
     {
       "name": "name",
       "type": "text",
-      "placeholder": {
+      "title": {
         "en": "Name",
         "nl": "Naam",
         "da": "Navn",
