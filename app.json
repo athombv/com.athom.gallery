@@ -67,6 +67,34 @@
       "path": "/image/:id"
     }
   },
+  "flow": {
+    "actions": [
+      {
+        "title": {
+          "en": "Add an Image to the Gallery"
+        },
+        "titleFormatted": {
+          "en": "Add [[droptoken]] as [[name]] to the Gallery"
+        },
+        "hint": {
+          "en": "This card adds an Image in your gGallery."
+        },
+        "droptoken": [
+          "image"
+        ],
+        "args": [
+          {
+            "name": "name",
+            "type": "text",
+            "placeholder": {
+              "en": "Name"
+            }
+          }
+        ],
+        "id": "create-image"
+      }
+    ]
+  },
   "widgets": {
     "slideshow": {
       "name": {

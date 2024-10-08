@@ -62,6 +62,18 @@ module.exports = class extends Homey.App {
         });
       }));
     }
+
+    this.homey.flow
+      .getActionCard('create-image')
+      .registerRunListener(async ({ droptoken, name }) => {
+        const imageStream = await droptoken.getStream();
+
+        await this.createImage({
+          name: name ?? imageStream.filename,
+          type: imageStream.contentType,
+          data: imageStream,
+        });
+      });
   }
 
   async initImage({ id }) {
