@@ -1,0 +1,51 @@
+{
+  "name": {
+    "en": "Slideshow"
+  },
+  "settings": [
+    {
+      "id": "effect",
+      "title": {
+        "en": "Effect"
+      },
+      "type": "dropdown",
+      "value": "slide",
+      "values": [
+        {
+          "id": "slide",
+          "title": {
+            "en": "Slide"
+          }
+        },
+        {
+          "id": "fade",
+          "title": {
+            "en": "Fade"
+          }
+        },
+        {
+          "id": "flip",
+          "title": {
+            "en": "Flip"
+          }
+        }
+      ]
+    },
+    {
+      "id": "delay",
+      "title": {
+        "en": "Delay"
+      },
+      "type": "number",
+      "hint": "Time to wait between images, in seconds.",
+      "value": 5
+    }
+  ],
+  "height": "100%",
+  "api": {
+    "getImages": {
+      "method": "GET",
+      "path": "/image"
+    }
+  }
+}

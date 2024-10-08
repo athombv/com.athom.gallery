@@ -1,0 +1,82 @@
+<html>
+
+<head>
+  <link
+    rel="stylesheet"
+    href="swiper-bundle.min.css"
+  >
+  <style>
+    html,
+    body {
+      overflow: hidden;
+      background-color: black;
+    }
+
+    #images {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #images .image {
+      width: 100vw;
+      height: 100vh;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+  </style>
+</head>
+
+<body class="homey-widget-full">
+  <div
+    id="images"
+    class="swiper"
+  >
+    <div
+      id="images-wrapper"
+      class="swiper-wrapper"
+    ></div>
+  </div>
+
+  <script
+    type="text/javascript"
+    src="swiper-bundle.min.js"
+  ></script>
+  <script type="text/javascript">
+    const $images = document.getElementById('images');
+    const $imagesWrapper = document.getElementById('images-wrapper');
+
+    function onHomeyReady(Homey) {
+      Homey.api('GET', '/image')
+        .then(images => {
+          // Create Image Elements
+          Object.values(images).forEach(image => {
+            const $image = document.createElement('div');
+            $image.classList.add('image');
+            $image.classList.add('swiper-slide');
+            $image.style.backgroundImage = `url(${window.location.origin}/app/com.athom.gallery${image.file})`;
+            $imagesWrapper.appendChild($image);
+          });
+
+          // Create Swiper
+          const swiper = new Swiper('#images', {
+            direction: 'horizontal',
+            loop: true,
+            effect: Homey.getSettings().effect,
+            autoplay: {
+              delay: Number.parseInt(Homey.getSettings().delay ?? 5) * 1000,
+            },
+          });
+        })
+        .catch(err => {
+          console.error(err);
+          document.write(err);
+        })
+        .finally(() => {
+          Homey.ready();
+        });
+    }
+  </script>
+</body>
+
+</html>
