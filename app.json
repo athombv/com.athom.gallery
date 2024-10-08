@@ -77,7 +77,7 @@
           "en": "Add [[droptoken]] as [[name]] to the Gallery"
         },
         "hint": {
-          "en": "This card adds an Image in your gGallery."
+          "en": "This card adds an Image in your Gallery."
         },
         "droptoken": [
           "image"
