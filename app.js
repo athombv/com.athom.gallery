@@ -125,6 +125,8 @@ module.exports = class extends Homey.App {
     await this.homey.settings.set('images', this._settings);
     await this.initImage({ id });
 
+    this.homey.api.realtime('image.create', { id });
+
     return this.getImage({ id });
   }
 
@@ -133,6 +135,8 @@ module.exports = class extends Homey.App {
     await this.homey.settings.set('images', this._settings);
 
     await this.uninitImage({ id }).catch((err) => this.error(`Error Uniniting Image: ${err.message}`));
+
+    this.homey.api.realtime('image.delete', { id });
   }
 
 };

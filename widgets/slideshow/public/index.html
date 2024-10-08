@@ -24,10 +24,31 @@
       background-repeat: no-repeat;
       background-position: center center;
     }
+
+    #error {
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      font-size: 18px;
+      line-height: 24px;
+      color: white;
+
+      padding: 3em;
+
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      white-space: pre-wrap;
+    }
   </style>
 </head>
 
 <body class="homey-widget-full">
+
   <div
     id="images"
     class="swiper"
@@ -36,6 +57,9 @@
       id="images-wrapper"
       class="swiper-wrapper"
     ></div>
+
+    <div id="error"></div>
+
   </div>
 
   <script
@@ -43,12 +67,26 @@
     src="swiper-bundle.min.js"
   ></script>
   <script type="text/javascript">
+    const $error = document.getElementById('error');
     const $images = document.getElementById('images');
     const $imagesWrapper = document.getElementById('images-wrapper');
 
     function onHomeyReady(Homey) {
+      Homey.on('image.create', () => {
+        window.location.reload(); // TODO: Add new image to swiper
+      });
+
+      Homey.on('image.delete', () => {
+        window.location.reload(); // TODO: Remove image from swiper
+      });
+
       Homey.api('GET', '/image')
         .then(images => {
+          // Ensure images
+          if (Object.keys(images).length === 0) {
+            throw new Error('The gallery is empty.\n\nPlease upload images in the app settings.');
+          }
+
           // Create Image Elements
           Object.values(images).forEach(image => {
             const $image = document.createElement('div');
@@ -70,7 +108,8 @@
         })
         .catch(err => {
           console.error(err);
-          document.write(err);
+          $error.textContent = err.message;
+          $error.style.visibility = 'visible';
         })
         .finally(() => {
           Homey.ready();
