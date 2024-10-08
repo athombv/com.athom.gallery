@@ -1,12 +1,45 @@
 {
   "title": {
-    "en": "Add an Image to the Gallery"
+    "en": "Add an Image to the Gallery",
+    "nl": "Voeg een afbeelding toe aan de galerij",
+    "da": "Tilføj et billede til galleriet",
+    "de": "Füge ein Bild zur Galerie hinzu",
+    "es": "Añadir una imagen a la galería",
+    "fr": "Ajouter une image à la galerie",
+    "it": "Aggiungi un'immagine alla galleria",
+    "no": "Legg til et bilde i galleriet",
+    "sv": "Lägg till en bild i galleriet",
+    "pl": "Dodaj obraz do galerii",
+    "ru": "Добавить изображение в галерею",
+    "ko": "갤러리에 이미지 추가"
   },
   "titleFormatted": {
-    "en": "Add [[droptoken]] as [[name]] to the Gallery"
+    "en": "Add [[droptoken]] as [[name]] to the Gallery",
+    "nl": "Voeg [[droptoken]] toe als [[name]] aan de galerij",
+    "da": "Tilføj [[droptoken]] som [[name]] til galleriet",
+    "de": "Füge [[droptoken]] als [[name]] zur Galerie hinzu",
+    "es": "Añadir [[droptoken]] como [[name]] a la galería",
+    "fr": "Ajouter [[droptoken]] en tant que [[name]] à la galerie",
+    "it": "Aggiungi [[droptoken]] come [[name]] alla galleria",
+    "no": "Legg til [[droptoken]] som [[name]] i galleriet",
+    "sv": "Lägg till [[droptoken]] som [[name]] i galleriet",
+    "pl": "Dodaj [[droptoken]] jako [[name]] do galerii",
+    "ru": "Добавить [[droptoken]] как [[name]] в галерею",
+    "ko": "갤러리에 [[droptoken]]을 [[name]]으로 추가"
   },
   "hint": {
-    "en": "This card adds an Image in your gGallery."
+    "en": "This card adds an Image in your gGallery.",
+    "nl": "Deze kaart voegt een afbeelding toe aan je galerij.",
+    "da": "Dette kort tilføjer et billede i dit galleri.",
+    "de": "Diese Karte fügt ein Bild zu Ihrer Galerie hinzu.",
+    "es": "Esta tarjeta añade una imagen a tu galería.",
+    "fr": "Cette carte ajoute une image à votre galerie.",
+    "it": "Questa scheda aggiunge un'immagine alla tua galleria.",
+    "no": "Dette kortet legger til et bilde i galleriet ditt.",
+    "sv": "Detta kort lägger till en bild i ditt galleri.",
+    "pl": "Ta karta dodaje obraz do twojej galerii.",
+    "ru": "Эта карточка добавляет изображение в вашу галерею.",
+    "ko": "이 카드는 갤러리에 이미지를 추가합니다."
   },
   "droptoken": [
     "image"
@@ -16,7 +49,18 @@
       "name": "name",
       "type": "text",
       "placeholder": {
-        "en": "Name"
+        "en": "Name",
+        "nl": "Naam",
+        "da": "Navn",
+        "de": "Name",
+        "es": "Nombre",
+        "fr": "Nom",
+        "it": "Nome",
+        "no": "Navn",
+        "sv": "Namn",
+        "pl": "Nazwa",
+        "ru": "Имя",
+        "ko": "이름"
       }
     }
   ]
