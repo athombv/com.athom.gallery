@@ -1,12 +1,34 @@
 {
   "name": {
-    "en": "Slideshow"
+    "en": "Slideshow",
+    "nl": "Diavoorstelling",
+    "da": "Diaserie",
+    "de": "Diashow",
+    "es": "Presentación",
+    "fr": "Diaporama",
+    "it": "Presentazione",
+    "no": "Lysbildefremvisning",
+    "sv": "Bildspel",
+    "pl": "Pokaz Slajdów",
+    "ru": "Слайд-шоу",
+    "ko": "슬라이드쇼"
   },
   "settings": [
     {
       "id": "effect",
       "title": {
-        "en": "Effect"
+        "en": "Effect",
+        "nl": "Effect",
+        "da": "Effekt",
+        "de": "Effekt",
+        "es": "Efecto",
+        "fr": "Effet",
+        "it": "Effetto",
+        "no": "Effekt",
+        "sv": "Effekt",
+        "pl": "Efekt",
+        "ru": "Эффект",
+        "ko": "효과"
       },
       "type": "dropdown",
       "value": "slide",
@@ -14,19 +36,52 @@
         {
           "id": "slide",
           "title": {
-            "en": "Slide"
+            "en": "Slide",
+            "nl": "Dia",
+            "da": "Diabillede",
+            "de": "Folie",
+            "es": "Diapositiva",
+            "fr": "Diapositive",
+            "it": "Diapositiva",
+            "no": "Lysbilde",
+            "sv": "Bild",
+            "pl": "Slajd",
+            "ru": "Слайд",
+            "ko": "슬라이드"
           }
         },
         {
           "id": "fade",
           "title": {
-            "en": "Fade"
+            "en": "Fade",
+            "nl": "Vervagen",
+            "da": "Tone",
+            "de": "Abblenden",
+            "es": "Desvanecer",
+            "fr": "Fondu",
+            "it": "Dissolvenza",
+            "no": "Toning",
+            "sv": "Tona",
+            "pl": "Zanikanie",
+            "ru": "Угасание",
+            "ko": "페이드"
           }
         },
         {
           "id": "flip",
           "title": {
-            "en": "Flip"
+            "en": "Flip",
+            "nl": "Omdraaien",
+            "da": "Vippe",
+            "de": "Umklappen",
+            "es": "Volteo",
+            "fr": "Basculer",
+            "it": "Capovolgi",
+            "no": "Blafre",
+            "sv": "Vända",
+            "pl": "Odwróć",
+            "ru": "Переворот",
+            "ko": "뒤집기"
           }
         }
       ]
@@ -34,7 +89,18 @@
     {
       "id": "delay",
       "title": {
-        "en": "Delay"
+        "en": "Delay",
+        "nl": "Vertraging",
+        "da": "Forsinkelse",
+        "de": "Verzögerung",
+        "es": "Retraso",
+        "fr": "Délai",
+        "it": "Ritardo",
+        "no": "Forsinkelse",
+        "sv": "Fördröjning",
+        "pl": "Opóźnienie",
+        "ru": "Задержка",
+        "ko": "지연"
       },
       "type": "number",
       "hint": "Time to wait between images, in seconds.",
